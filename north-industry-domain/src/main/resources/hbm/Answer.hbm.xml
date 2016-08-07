@@ -1,0 +1,12 @@
+<?xml version='1.0' encoding='utf-8'?>
+<!DOCTYPE hibernate-mapping PUBLIC
+    "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+    "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+
+    <class name="com.model.Answer" table="answer" schema="north_industry">
+        <id name="anId" column="an_id"/>
+        <property name="anContent" column="an_content"/>
+        <property name="anDate" column="an_date"/>
+    </class>
+</hibernate-mapping>

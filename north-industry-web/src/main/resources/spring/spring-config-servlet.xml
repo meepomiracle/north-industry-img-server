@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:context="http://www.springframework.org/schema/context"
+       xmlns:mvc="http://www.springframework.org/schema/mvc"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context.xsd http://www.springframework.org/schema/mvc http://www.springframework.org/schema/mvc/spring-mvc.xsd">
+
+    <!--<context:annotation-config />-->
+    <!-- 扫描注解的配置-->
+    <context:component-scan base-package="com.controller" />
+    <!--注入两个bean-->
+    <mvc:annotation-driven />
+    <!--数据库属性配置-->
+    <mvc:resources mapping="/file/**" location="file:/tomcat8/webapps/file/"></mvc:resources>
+
+    <mvc:interceptors>
+        <bean class="com.interceptor.LoginValidInterceptor"/>
+    </mvc:interceptors>
+
+    <import resource="classpath:hibernate/spring-config-dao.xml"></import>
+
+    <bean class="org.springframework.beans.factory.config.MethodInvokingFactoryBean">
+        <property name="targetClass" value="org.springframework.util.Log4jConfigurer"></property>
+        <property name="targetMethod" value="initLogging"></property>
+        <property name="arguments">
+            <list>
+                <value>classpath:properties/log4j.properties</value>
+            </list>
+        </property>
+    </bean>
+</beans>

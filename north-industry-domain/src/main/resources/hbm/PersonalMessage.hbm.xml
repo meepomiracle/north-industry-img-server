@@ -1,0 +1,16 @@
+<?xml version='1.0' encoding='utf-8'?>
+<!DOCTYPE hibernate-mapping PUBLIC
+    "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+    "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+
+    <class name="com.model.PersonalMessage" table="personal_message" schema="north_industry">
+        <id name="pmId" column="pm_id"/>
+        <property name="pmContent" column="pm_content"/>
+        <property name="pmDate" column="pm_date"/>
+        <property name="pmReadState" column="pm_read_state"/>
+        <property name="pmUserType" column="pm_user_type"/>
+        <property name="pmMsgType" column="pm_msg_type"/>
+        <property name="pmUserId" column="pm_user_id"/>
+    </class>
+</hibernate-mapping>

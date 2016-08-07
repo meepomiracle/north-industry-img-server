@@ -1,0 +1,16 @@
+<?xml version='1.0' encoding='utf-8'?>
+<!DOCTYPE hibernate-mapping PUBLIC
+    "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+    "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+
+    <class name="com.model.Question" table="question" schema="north_industry">
+        <id name="quId" column="qu_id"/>
+        <property name="quTitle" column="qu_title"/>
+        <property name="quContent" column="qu_content"/>
+        <property name="quDate" column="qu_date"/>
+        <many-to-one name="providerByProId" class="com.model.Provider">
+            <column name="pro_id"/>
+        </many-to-one>
+    </class>
+</hibernate-mapping>

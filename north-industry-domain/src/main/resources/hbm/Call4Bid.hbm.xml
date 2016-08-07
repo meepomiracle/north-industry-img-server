@@ -1,0 +1,29 @@
+<?xml version='1.0' encoding='utf-8'?>
+<!DOCTYPE hibernate-mapping PUBLIC
+    "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+    "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+
+    <class name="com.model.Call4Bid" table="call4bid" schema="north_industry">
+        <id name="cbId" column="cb_id"/>
+        <property name="cbSummary" column="cb_summary"/>
+        <property name="cbTitle" column="cb_title"/>
+        <property name="cbBidStartDate" column="cb_bid_start_date"/>
+        <property name="cbBidEndDate" column="cb_bid_end_date"/>
+        <property name="cbAudit1Date" column="cb_audit_1_date"/>
+        <property name="cbAudit3Date" column="cb_audit_3_date"/>
+        <property name="cbAudit2Date" column="cb_audit_2_date"/>
+        <property name="cbPublishBidedDate" column="cb_publish_bided_date"/>
+        <property name="cbLaunchDate" column="cb_launch_date"/>
+        <property name="cbWinNumber" column="cb_win_number"/>
+        <property name="cbContentBided" column="cb_content_bided"/>
+        <property name="cbContentBiding" column="cb_content_biding"/>
+        <property name="cbAttachmentDesc" column="cb_attachment_desc"/>
+        <property name="cbAttachmentUrll" column="cb_attachment_urll"/>
+        <property name="cbState" column="cb_state"/>
+        <property name="cbCheckState" column="cb_check_state"/>
+        <property name="cdBidSelected" column="cd_bid_selected"/>
+        <property name="cbCheckByExpert" column="cb_check_by_expert"/>
+        <property name="cbLastModifiedDate" column="cb_last_modified_date"/>
+    </class>
+</hibernate-mapping>

@@ -1,0 +1,31 @@
+<?xml version='1.0' encoding='utf-8'?>
+<!DOCTYPE hibernate-mapping PUBLIC
+    "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+    "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+
+    <class name="com.model.Product" table="product" schema="north_industry">
+        <id name="prodcId" column="prodc_id"/>
+        <property name="prodcName" column="prodc_name"/>
+        <property name="prodcIntro" column="prodc_intro"/>
+        <property name="prodcFunction" column="prodc_function"/>
+        <property name="prodcTechParam" column="prodc_tech_param"/>
+        <property name="prodcPicture" column="prodc_picture"/>
+        <property name="prodcAdavantage" column="prodc_adavantage"/>
+        <property name="prodcCase" column="prodc_case"/>
+        <property name="prodcNo" column="prodc_no"/>
+        <property name="prodcInventory" column="prodc_inventory"/>
+        <property name="prodcOtherInfo" column="prodc_otherInfo"/>
+        <property name="prodcPrice" column="prodc_price"/>
+        <property name="prodcValid" column="prodc_valid"/>
+        <property name="prodcSerial" column="prodc_serial"/>
+        <property name="prodcRespo" column="prodc_respo"/>
+        <property name="prodcType" column="prodc_type"/>
+        <many-to-one name="categoryConfProductSeriesByCcpsId" class="com.model.CategoryConfProductSeries">
+            <column name="ccps_id" not-null="true"/>
+        </many-to-one>
+        <many-to-one name="categoryConfProductTypeByCcptId" class="com.model.CategoryConfProductType">
+            <column name="ccpt_id" not-null="true"/>
+        </many-to-one>
+    </class>
+</hibernate-mapping>

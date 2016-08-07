@@ -1,0 +1,13 @@
+<?xml version='1.0' encoding='utf-8'?>
+<!DOCTYPE hibernate-mapping PUBLIC
+    "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+    "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+
+    <class name="com.model.CategoryConfEnterpriseScale" table="category_conf_enterprise_scale" schema="north_industry">
+        <id name="ccesId" column="cces_id"/>
+        <property name="ccesItem" column="cces_item"/>
+        <property name="ccesSortOrder" column="cces_sort_order"/>
+        <property name="valid" column="valid"/>
+    </class>
+</hibernate-mapping>

@@ -1,0 +1,14 @@
+<?xml version='1.0' encoding='utf-8'?>
+<!DOCTYPE hibernate-mapping PUBLIC
+    "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+    "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+
+    <class name="com.model.DownloadArea" table="download_area" schema="north_industry">
+        <id name="daId" column="da_id"/>
+        <property name="daName" column="da_name"/>
+        <property name="daType" column="da_type"/>
+        <property name="daUrl" column="da_url"/>
+        <property name="daDate" column="da_date"/>
+    </class>
+</hibernate-mapping>

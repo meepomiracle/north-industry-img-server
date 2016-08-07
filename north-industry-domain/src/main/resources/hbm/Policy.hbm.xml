@@ -1,0 +1,13 @@
+<?xml version='1.0' encoding='utf-8'?>
+<!DOCTYPE hibernate-mapping PUBLIC
+    "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+    "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+
+    <class name="com.model.Policy" table="policy" schema="north_industry">
+        <id name="poId" column="po_id"/>
+        <property name="poName" column="po_name"/>
+        <property name="poUrl" column="po_url"/>
+        <property name="poDate" column="po_date"/>
+    </class>
+</hibernate-mapping>

@@ -1,0 +1,12 @@
+<?xml version='1.0' encoding='utf-8'?>
+<!DOCTYPE hibernate-mapping PUBLIC
+    "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+    "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+
+    <class name="com.model.SystemNotification" table="system_notification" schema="north_industry">
+        <id name="sysnId" column="sysn_id"/>
+        <property name="sysnContent" column="sysn_content"/>
+        <property name="sysnDate" column="sysn_date"/>
+    </class>
+</hibernate-mapping>

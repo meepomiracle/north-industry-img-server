@@ -1,0 +1,15 @@
+<?xml version='1.0' encoding='utf-8'?>
+<!DOCTYPE hibernate-mapping PUBLIC
+    "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+    "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+
+    <class name="com.model.Materialquotation" table="materialquotation" schema="north_industry">
+        <id name="mqId" column="mq_id"/>
+        <property name="mqContent" column="mq_content"/>
+        <property name="mqTitle" column="mq_title"/>
+        <property name="mqCreateDate" column="mq_create_date"/>
+        <property name="mqUpdateDate" column="mq_update_date"/>
+        <property name="mqDate" column="mq_date"/>
+    </class>
+</hibernate-mapping>

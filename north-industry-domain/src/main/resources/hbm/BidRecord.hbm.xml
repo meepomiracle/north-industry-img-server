@@ -1,0 +1,15 @@
+<?xml version='1.0' encoding='utf-8'?>
+<!DOCTYPE hibernate-mapping PUBLIC
+    "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+    "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+
+    <class name="com.model.BidRecord" table="bid_record" schema="north_industry">
+        <id name="brId" column="br_id"/>
+        <property name="brBidPaperUrl" column="br_bid_paper_url"/>
+        <property name="brBidPaperName" column="br_bid_paper_name"/>
+        <property name="brBidDate" column="br_bid_date"/>
+        <property name="brBidStatus" column="br_bid_status"/>
+        <property name="brLocked" column="br_locked"/>
+    </class>
+</hibernate-mapping>

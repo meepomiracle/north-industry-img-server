@@ -1,0 +1,29 @@
+<?xml version='1.0' encoding='utf-8'?>
+<!DOCTYPE hibernate-mapping PUBLIC
+    "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+    "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+
+    <class name="com.model.Staff" table="staff" schema="north_industry">
+        <id name="staId" column="sta_id"/>
+        <property name="staName" column="sta_name"/>
+        <property name="staGender" column="sta_gender"/>
+        <property name="staEntryTime" column="sta_entryTime"/>
+        <property name="staRoleType" column="sta_roleType"/>
+        <property name="staAccout" column="sta_accout"/>
+        <property name="staContact" column="sta_contact"/>
+        <property name="staPassword" column="sta_password"/>
+        <property name="staMajor" column="sta_major"/>
+        <property name="staAvatar" column="sta_avatar"/>
+        <property name="staEmail" column="sta_email"/>
+        <property name="staValid" column="sta_valid"/>
+        <property name="staToken" column="sta_token"/>
+        <property name="staExpire" column="sta_expire"/>
+        <many-to-one name="categoryConfDepartmentByDepId" class="com.model.CategoryConfDepartment">
+            <column name="dep_id"/>
+        </many-to-one>
+        <many-to-one name="categoryConfCompanyByCompanyId" class="com.model.CategoryConfCompany">
+            <column name="company_id"/>
+        </many-to-one>
+    </class>
+</hibernate-mapping>

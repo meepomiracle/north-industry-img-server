@@ -1,0 +1,62 @@
+<?xml version='1.0' encoding='utf-8'?>
+<!DOCTYPE hibernate-mapping PUBLIC
+    "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+    "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+
+    <class name="com.model.Provider" table="provider" schema="north_industry">
+        <id name="proId" column="pro_id"/>
+        <property name="proName" column="pro_name"/>
+        <property name="proAddr" column="pro_addr"/>
+        <property name="proPhone" column="pro_phone"/>
+        <property name="proEmail" column="pro_email"/>
+        <property name="proContact" column="pro_contact"/>
+        <property name="proPassword" column="pro_password"/>
+        <property name="proQualificationOtherUrl" column="pro_qualification_other_url"/>
+        <property name="proQualificationCheckUrl" column="pro_qualification_check_url"/>
+        <property name="proQualificationVerifyUrl" column="pro_qualification_verify_url"/>
+        <property name="proQualificationOther" column="pro_qualification_other"/>
+        <property name="proQualificationCheck" column="pro_qualification_check"/>
+        <property name="proQualificationVerify" column="pro_qualification_verify"/>
+        <property name="proLicence" column="pro_licence"/>
+        <property name="proLicenceUrl" column="pro_licence_url"/>
+        <property name="proRegisterTime" column="pro_registerTime"/>
+        <property name="proOtherfilesUrl" column="pro_otherfiles_url"/>
+        <property name="proLawinfo" column="pro_lawinfo"/>
+        <property name="proLawinfoUrl" column="pro_lawinfo_url"/>
+        <property name="proIntro" column="pro_intro"/>
+        <property name="proOtherInfo" column="pro_otherInfo"/>
+        <property name="proGrade" column="pro_grade"/>
+        <property name="proScoreProvideCycle" column="pro_score_provide_cycle"/>
+        <property name="proScoreAttitude" column="pro_score_attitude"/>
+        <property name="proScoreCoverRate" column="pro_score_cover_rate"/>
+        <property name="proScoreService" column="pro_score_service"/>
+        <property name="proScoreTotalNum" column="pro_score_total_num"/>
+        <property name="proScoreQuality" column="pro_score_quality"/>
+        <property name="proFinanceinfoUrl" column="pro_financeinfo_url"/>
+        <property name="proFinanceinfo" column="pro_financeinfo"/>
+        <property name="proLastModifyDate" column="pro_last_modify_date"/>
+        <property name="proValid" column="pro_valid"/>
+        <property name="proCheckState" column="pro_check_state"/>
+        <property name="proToken" column="pro_token"/>
+        <property name="proExpire" column="pro_expire"/>
+        <property name="proQulaificationOtherUrl" column="pro_qulaification_other_url"/>
+        <property name="proQulaificationCheckUrl" column="pro_qulaification_check_url"/>
+        <property name="proQulaificationVerifyUrl" column="pro_qulaification_verify_url"/>
+        <many-to-one name="categoryConfEnterpriseScaleByCcesId" class="com.model.CategoryConfEnterpriseScale">
+            <column name="cces_id"/>
+        </many-to-one>
+        <many-to-one name="categoryConfCompanyByCccId" class="com.model.CategoryConfCompany">
+            <column name="ccc_id"/>
+        </many-to-one>
+        <many-to-one name="categoryConfAreaByCcaId" class="com.model.CategoryConfArea">
+            <column name="cca_id"/>
+        </many-to-one>
+        <many-to-one name="categoryConfFundByCcfId" class="com.model.CategoryConfFund">
+            <column name="ccf_id"/>
+        </many-to-one>
+        <many-to-one name="categoryConfEnterpriseTypeByCcetId" class="com.model.CategoryConfEnterpriseType">
+            <column name="ccet_id"/>
+        </many-to-one>
+    </class>
+</hibernate-mapping>

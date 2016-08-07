@@ -1,0 +1,27 @@
+<?xml version='1.0' encoding='utf-8'?>
+<!DOCTYPE hibernate-mapping PUBLIC
+    "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+    "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+
+    <class name="com.model.StaffOperationHistory" table="staff_operation_history" schema="north_industry">
+        <id name="sohId" column="soh_id"/>
+        <property name="sohDesc" column="soh_desc"/>
+        <property name="sohDatetime" column="soh_datetime"/>
+        <property name="sohType" column="soh_type"/>
+        <property name="sohOpType" column="soh_op_type"/>
+        <property name="sohCompanyId" column="soh_company_id"/>
+        <many-to-one name="staffByStaId" class="com.model.Staff">
+            <column name="sta_id"/>
+        </many-to-one>
+        <many-to-one name="staffBySohStaffId" class="com.model.Staff">
+            <column name="soh_staff_id" not-null="true"/>
+        </many-to-one>
+        <many-to-one name="providerBySohProviderId" class="com.model.Provider">
+            <column name="soh_provider_id" not-null="true"/>
+        </many-to-one>
+        <many-to-one name="call4BidBySohBidId" class="com.model.Call4Bid">
+            <column name="soh_bid_id" not-null="true"/>
+        </many-to-one>
+    </class>
+</hibernate-mapping>

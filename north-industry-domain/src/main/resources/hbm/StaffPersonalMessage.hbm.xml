@@ -1,0 +1,24 @@
+<?xml version='1.0' encoding='utf-8'?>
+<!DOCTYPE hibernate-mapping PUBLIC
+    "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+    "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+
+    <class name="com.model.StaffPersonalMessage" table="staff_personal_message" schema="north_industry">
+        <id name="id" column="id"/>
+        <property name="msgType" column="msg_type"/>
+        <property name="msgState" column="msg_state"/>
+        <many-to-one name="productByProductId" class="com.model.Product">
+            <column name="product_id" not-null="true"/>
+        </many-to-one>
+        <many-to-one name="providerByProviderId" class="com.model.Provider">
+            <column name="provider_id" not-null="true"/>
+        </many-to-one>
+        <many-to-one name="staffByStaffId" class="com.model.Staff">
+            <column name="staff_id" not-null="true"/>
+        </many-to-one>
+        <many-to-one name="call4BidByBidId" class="com.model.Call4Bid">
+            <column name="bid_id" not-null="true"/>
+        </many-to-one>
+    </class>
+</hibernate-mapping>

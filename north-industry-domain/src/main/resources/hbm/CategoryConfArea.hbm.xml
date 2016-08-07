@@ -1,0 +1,13 @@
+<?xml version='1.0' encoding='utf-8'?>
+<!DOCTYPE hibernate-mapping PUBLIC
+    "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+    "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+
+    <class name="com.model.CategoryConfArea" table="category_conf_area" schema="north_industry">
+        <id name="ccaId" column="cca_id"/>
+        <property name="ccaItem" column="cca_item"/>
+        <property name="ccaSortOrder" column="cca_sort_order"/>
+        <property name="valid" column="valid"/>
+    </class>
+</hibernate-mapping>

@@ -1,0 +1,21 @@
+<?xml version='1.0' encoding='utf-8'?>
+<!DOCTYPE hibernate-mapping PUBLIC
+    "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+    "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+
+    <class name="com.model.BasicInfo" table="basic_info" schema="north_industry">
+        <id name="biId" column="bi_id"/>
+        <property name="biCompAddr" column="bi_comp_addr"/>
+        <property name="biCompany" column="bi_company"/>
+        <property name="biDescription" column="bi_description"/>
+        <property name="biContact" column="bi_contact"/>
+        <property name="biVersionNoAndroidPro" column="bi_version_no_android_pro"/>
+        <property name="biVersionNoAndroidSta" column="bi_version_no_android_sta"/>
+        <property name="biVersionNoIosPro" column="bi_version_no_ios_pro"/>
+        <property name="biVersionNoIosSta" column="bi_version_no_ios_sta"/>
+        <property name="biFax" column="bi_fax"/>
+        <property name="biEmail" column="bi_email"/>
+        <property name="biQq" column="bi_qq"/>
+    </class>
+</hibernate-mapping>

@@ -1,0 +1,19 @@
+<?xml version='1.0' encoding='utf-8'?>
+<!DOCTYPE hibernate-mapping PUBLIC
+    "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+    "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+
+    <class name="com.model.MaterialRecord" table="materialRecord" schema="north_industry">
+        <id name="matId" column="mat_id"/>
+        <property name="matUnit" column="mat_unit"/>
+        <property name="matQuantity" column="mat_quantity"/>
+        <property name="matPrice" column="mat_price"/>
+        <many-to-one name="categoryConfMatNameByCcmnId" class="com.model.CategoryConfMatName">
+            <column name="ccmn_id"/>
+        </many-to-one>
+        <many-to-one name="call4BidByCbId" class="com.model.Call4Bid">
+            <column name="cb_id"/>
+        </many-to-one>
+    </class>
+</hibernate-mapping>
