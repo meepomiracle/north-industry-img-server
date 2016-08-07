@@ -1,1 +1,1 @@
-# springmvc-mybaits-module-demo
+# north-industry-img-server
